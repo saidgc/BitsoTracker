@@ -6,6 +6,8 @@ import requests
 import json
 import numpy as np
 import time
+import csv
+import datetime
 
 
 # tamaño de la operación
@@ -63,6 +65,12 @@ def tracking():
 
   # se muestran los datos en tiempo real
   print(value, vactual, value * ganan, ganan)
+
+  row = [datetime.datetime.now(), value, vactual, (value * ganan), ganan]
+  with open('datos.csv', 'a') as csvFile:
+    writer = csv.writer(csvFile)
+    writer.writerow(row)
+  csvFile.close()
 
 
 if __name__ == "__main__":
