@@ -7,13 +7,11 @@ import json
 import numpy as np
 import time
 
-# OPERACION = 0.0001000
-OPERACION = 1000
+OPERACION = 0.0001000
 
 venta = None
 opera = False
-ganan = 1000.0000001
-# ganan = 0.0005396
+ganan = 0.0005396
 vactual = 0
 data = []
 listo = False
